@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G3025" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Father" representedClassName="Father" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="son" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Son" inverseName="father" inverseEntity="Son" syncable="YES"/>
+    </entity>
+    <entity name="Son" representedClassName="Son" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="father" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Father" inverseName="son" inverseEntity="Father" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Father" positionX="-9" positionY="36" width="128" height="90"/>
+        <element name="Son" positionX="-9" positionY="36" width="128" height="90"/>
+    </elements>
+</model>
