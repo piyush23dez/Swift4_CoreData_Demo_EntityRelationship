@@ -42,7 +42,6 @@ class ViewController: UIViewController {
     func fetch() {
         do {
             //let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Father")
-            //let request: NSFetchRequest<NSFetchRequestResult> = Father.fetchRequest()
             let request: NSFetchRequest<Father> = Father.fetchRequest()
             let fathers = try context.fetch(request)
             
